@@ -6,7 +6,7 @@
 
 My personal portfolio website, showcasing some of my projects and skills.
 
-[Link](https://your-portfolio-url.com)
+[Link](https://vic-ler.github.io/portfolio/)
 
 ## Summary
 

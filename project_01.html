@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marsian Winds</title>
+  <script src="scripts/projects.js" defer></script>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 60px; height: 60px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 60%; right: 10%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <a href="index.html#projects" class="back-link">
+             ← Back to Portfolio
+            </a>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Marsian Winds</h1>
+        <p class="subtitle">Measuring Martian winds by tracking clouds in Emirates Mars Mission UV imaging</p>
+        
+        <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Matlab</span>
+            <span class="tech-tag">Image Analysis</span>
+            <span class="tech-tag">Data Optimization</span>
+        </div>
+
+        <div class="project-toggles">
+          <div class="toggle-section">
+            <button class="toggle-btn" onclick="toggleSection(this)">
+              <span class="toggle-icon">📄</span>
+              <span class="toggle-text">Business Impact</span>
+              <span class="toggle-arrow">▼</span>
+            </button>
+            <div class="toggle-content">
+              <p>Segmented retail customers using RFM (Recency, Frequency, Monetary) analysis. Business teams used this to identify high-value and at-risk customers, resulting in targeted marketing campaigns that increased customer retention by 25% and drove significant revenue growth.</p>
+            </div>
+          </div>
+          
+          <div class="toggle-section">
+            <button class="toggle-btn" onclick="toggleSection(this)">
+              <span class="toggle-icon">⚙️</span>
+              <span class="toggle-text">Technical Details</span>
+              <span class="toggle-arrow">▼</span>
+            </button>
+            <div class="toggle-content">
+              <p>Used SQL CTEs, CASE statements, and percentile ranking. Ran queries on PostgreSQL with optimized indexing for large transactional data. Implemented automated scoring system using window functions and created materialized views for performance optimization.</p>
+              <a href="https://github.com/yourusername/sql-segmentation" class="github-link" target="_blank">
+                <span class="github-icon">⭐</span>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+</div>
+</body>
+</html>

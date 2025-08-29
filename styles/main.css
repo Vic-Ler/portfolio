@@ -258,15 +258,25 @@
             border-color: #65F4FF;
         }
 
-        .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+        .category-image {
+            margin-bottom: 0.5rem; 
+            display: flex;          
+            justify-content: center;
+            align-items: center;
         }
 
-        .project-category-card:hover .category-icon {
+        .category-image img {
+            width: auto;           
+            height: 150px;
+            object-fit: cover;       
+            display: block;          
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-category-card:hover .category-image img {
             filter: grayscale(0%);
+            transform: scale(1.05); 
         }
 
         .project-category-card h3 {
@@ -280,7 +290,7 @@
             color: #cccccc;
         }
 
-        .category-count {
+        .project-button {
             background: rgba(101, 244, 255, 0.2);
             color: #65F4FF;
             padding: 0.4rem 1rem;
