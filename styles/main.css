@@ -506,15 +506,41 @@
             border-radius: 10px;
             border: 1px solid #00A3B0;
             transition: all 0.3s ease;
+            word-break: break-word;   /* prevents link overflow */
         }
 
         .contact-item img {
             width: 30px;   
             height: 30px; 
             object-fit: contain;
-            display: block;
+            flex-shrink: 0; /* prevents the icon from shrinking */
         }
 
+        .contact-item strong {
+            font-size: 1rem;
+            color: #65F4FF;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .contact-item a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all; 
+        }
+
+        .contact-item a:hover {
+            color: #65F4FF;
+        }
+
+        /* Hover effect */
         .contact-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(101, 244, 255, 0.2);
