@@ -166,8 +166,10 @@
       box-shadow: 0 4px 15px rgba(101, 244, 255, 0.2);
     }
 
-    .toggle-icon {
-      font-size: 1.2rem;
+    .toggle-icon img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
     }
 
     .toggle-text {
@@ -175,8 +177,9 @@
       text-align: left;
     }
 
-    .toggle-arrow {
-      font-size: 0.8rem;
+    .toggle-arrow img {
+      width: 24px;
+      height: 24px;
       transition: transform 0.3s ease;
     }
 
@@ -198,7 +201,7 @@
     }
 
     .toggle-content.active {
-      max-height: 300px;
+      max-height: 10000px;
       padding: 1.5rem;
     }
 
@@ -229,6 +232,8 @@
       box-shadow: 0 4px 12px rgba(101, 244, 255, 0.3);
     }
 
-    .github-icon {
-      font-size: 1rem;
+    .github-icon img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
     }
