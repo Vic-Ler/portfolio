@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria's Portfolio</title>
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">VR</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-text">
+                    <h1>Victoria Rauscher</h1>
+                    <h2>Curious · Analytical · Creative</h2>
+                    <p>I bring together a unique mix of business, design, and data with a B.A. in Fashion Management, 
+                        an M.Sc. in Design for Business, and an M.Sc. in Data Science. 
+                        My professional journey has taken me from omni-channel management and digital marketing to data analytics, 
+                        giving me a broad perspective on how strategy, creativity, and data come together.
+                        </p>
+                    <a href="#projects" class="cta-button">See My Work</a>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src="images/profile_image.jpeg" alt="Victoria's Photo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating particles -->
+        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="particle" style="top: 80%; left: 20%; animation-delay: 4s;"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section alt">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div>
+                    <p>Curiosity is at the heart of how I work. 
+                        I enjoy immersing myself in new topics, researching deeply, and finding solutions independently. 
+                        Beyond my technical and analytical skills, I am reliable, collaborative, and motivated by helping others and contributing to projects that create real impact. 
+                        My dedication and drive are reflected in my academic excellence, including graduating valedictorian in high school and earning cum laude honors in both of my master’s degrees.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="images/data_analytics.png" alt="Data Analytics Icon" />
+                        <h3>Data Analytics</h3>
+                        <p>Transforming data into actionable insights</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/data_visualisation.png" alt="Data Visualization Icon" />
+                        <h3>Data Visualization</h3>
+                        <p>Presenting insights clearly and effectively</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/machine_learning.png" alt="Machine Learning Icon" />
+                        <h3>Machine Learning</h3>
+                        <p>Building predictive models and algorithms</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/business_strategy.png" alt="Business Strategy Icon" />
+                        <h3>Business Strategy</h3>
+                        <p>Linking data to strategic decisions</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/design_research.png" alt="Design & User Research Icon" />
+                        <h3>Design & Research</h3>
+                        <p>Human-centered problem solving and user insights</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/project_management.png" alt="Project Management Icon" />
+                        <h3>Project Management</h3>
+                        <p>Planning, organizing, and delivering results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-category-card">
+                <div class="category-icon">🐍</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="xy.html" class="category-count-link">
+                    <div class="category-count">4 Projects</div>
+                </a>
+            </div>
+
+            <div class="project-category-card">
+                <div class="category-icon">🗄️</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="sql.html" class="category-count-link">
+                    <div class="category-count">4 Projects</div>
+                </a>
+            </div>
+
+            <div class="project-category-card">
+                <div class="category-icon">📊</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="visualization.html" class="category-count-link">
+                    <div class="category-count">6 Projects</div>
+                </a>
+            </div>
+
+            <div class="project-category-card">
+                <div class="category-icon">🤖</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="ml.html" class="category-count-link">
+                    <div class="category-count">4 Projects</div>
+                </a>
+            </div>
+
+            <div class="project-category-card">
+                <div class="category-icon">📈</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="excel.html" class="category-count-link">
+                    <div class="category-count">3 Projects</div>
+                </a>
+            </div>
+
+            <div class="project-category-card">
+                <div class="category-icon">📉</div>
+                <h3>Placeholder</h3>
+                <p>Placeholder Details</p>
+                <a href="stats.html" class="category-count-link">
+                    <div class="category-count">4 Projects</div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="section alt">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-container">
+                <!-- Work Experience Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">Work Experience</h3>
+                    
+                    <div class="job-entry">
+                        <div class="job-left">
+                            <div class="company">
+                                <img src="images/msd.png" alt="MSD Logo" class="company-logo" />
+                                <span>MSD Austria</span></div>
+                            <div class="location">Vienna, Austria</div>
+                            <div class="dates">Part-time <br> Mar 2024 - Jul 2025</div>
+                        </div>
+                        <div class="job-right">
+                            <div class="job-title">Data Analyst</div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Analyzed sales force KPIs and provided actionable insights for targeted strategic adjustments</li>
+                                    <li>Built automated R and Power BI dashboards, improving KPI transparency and cutting manual reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="job-left">
+                            <div class="company">
+                                <img src="images/vitra.png" alt="Vitra Logo" class="company-logo" />
+                                <span>Vitra International AG</span></div>   
+                            <div class="location">Basel, Switzerland</div>
+                            <div class="dates">Full-time <br> Mar 2023 - Feb 2024</div>
+                        </div>
+                        <div class="job-right">
+                            <div class="job-title">Omni Channel Manager</div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Led omni-channel initiatives, including a product configurator, Salesforce-integrated event registration, and product rendering solutions, ensuring a seamless and strategy-aligned customer experience across all channels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="job-left">
+                            <div class="company">
+                                <img src="images/vitra.png" alt="Vitra Logo" class="company-logo" />
+                                <span>Vitra International AG</span></div>   
+                            <div class="location">Basel, Switzerland</div>
+                            <div class="dates">Full-time <br> Sep 2019 - Mar 2023</div>
+                        </div>
+                        <div class="job-right">
+                            <div class="job-title">Digital Marketing & Trade Marketing Project Manager</div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Implemented lead generation and nurturing strategies, including a lead scoring model, to improve MQL quality and increase conversion rates</li>
+                                    <li>Analyzed multi-channel marketing data (campaign performance, CRM trends, event metrics) to support strategic decisions and annual planning</li>
+                                    <li>Coordinated digital activation of global events (e.g., Vitra Sessions) to boost online engagement</li>
+                                    <li>Supported global deployment of Salesforce Marketing Cloud, ensuring smooth campaign execution</li>
+                                    <li>Trained and onboarded new members of the digital marketing team</li>
+                                    <li>Managed marketing production and logistics, including full handling of merchandise, POS materials, and printed publications across multiple markets</li>
+                                    <li>Developed and implemented, in collaboration with IT, a structured internal marketing production request process to streamline workflows and logistics coordination</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="job-left">
+                            <div class="company">
+                                <img src="images/vitra.png" alt="Vitra Logo" class="company-logo" />
+                                <span>Vitra International AG</span></div>   
+                            <div class="location">Basel, Switzerland</div>
+                            <div class="dates">Full-time <br> Sep 2018 - Sep 2019</div>
+                        </div>
+                        <div class="job-right">
+                            <div class="job-title">Intern</div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Rotated through multiple marketing teams during my internship while completing my bachelor thesis, gaining broad insights into marketing functions and hands-on project experience</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">Education</h3>
+                    
+                    <div class="education-entry">
+                        <div class="education-left">
+                            <div class="school">
+                                <img src="images/uoa.png" alt="University of Aberdeen Logo" class="company-logo" />
+                                <span>University of Aberdeen</span></div>   
+                            <div class="school-location">Aberdeen, United Kingdom</div>
+                            <div class="graduation-year">2023 - 2024</div>
+                        </div>
+                        <div class="education-right">
+                            <div class="degree">Master of Science in Data Science</div>
+                            <div class="degree-description">
+                                <ul>
+                                    <li>Modules: Introduction to Programming, Introduction to Data Science, Python & R, Statistics, Advanced Statistics & Time Series Analysis, Image Analysis, Machine Learning, Data Visualization</li>
+                                    <li>Thesis: "Measuring Martian winds by tracking clouds in Emirates Mars Mission UV imaging"</li>
+                                    <li>Graduated with distinction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-entry">
+                        <div class="education-left">
+                            <div class="school">
+                                <img src="images/uod.png" alt="University of Dundee Logo" class="company-logo" />
+                                <span>University of Dundee</span></div>   
+                            <div class="school-location">Dundee, United Kingdom</div>
+                            <div class="graduation-year">2020 - 2021</div>
+                        </div>
+                        <div class="education-right">
+                            <div class="degree">Master of Science in Design for Business</div>
+                            <div class="degree-description">
+                                <ul>
+                                    <li>Modules: Design Thinking, Marketing Management & Strategy, Insight to Innovation, Service Prototyping, Business Enterprise & Entrepreneurship, Changing Populations, Leadership & Culture</li>
+                                    <li>Academic Accelerator Program: Elevator UK</li>
+                                    <li>Graduated with distinction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-entry">
+                        <div class="education-left">
+                            <div class="school">
+                                <img src="images/rgu.png" alt="Robert Gordon University Logo" class="company-logo" />
+                                <span>Robert Gordon University</span></div>   
+                            <div class="school-location">Aberdeen, United Kingdom</div>
+                            <div class="graduation-year">2016 - 2019</div>
+                        </div>
+                        <div class="education-right">
+                            <div class="degree">Bachelor of Arts in Fashion Management</div>
+                            <div class="degree-description">
+                                <ul>
+                                    <li>Solid knowledge in core areas of business administration—including marketing, consumer analysis, strategic management, and omni-channel retail—applied in the context of the fashion and creative industries</li>
+                                    <li>Extracurricular: Completed a French language course</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-entry">
+                        <div class="education-left">
+                            <div class="school">
+                                <img src="images/hbla.png" alt="HBLA Herbststrasse Logo" class="company-logo" />
+                                <span>HBLA Herbststrasse</span></div>   
+                            <div class="school-location">Vienna, Austria</div>
+                            <div class="graduation-year">2011 - 2016</div>
+                        </div>
+                        <div class="education-right">
+                            <div class="degree">Matura/Abitur & Diploma</div>
+                            <div class="degree-description">
+                                <ul>
+                                    <li>Fashion Diploma (covering multiple work areas)</li>
+                                    <li>Relevant courses: Business Administration, Marketing & Sales Management, Accounting, Project & Quality Management, Process Design & Process Data Management</li>
+                                    <li>Graduated as Valedictorian (top of class)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">Languages</h3>
+                    <div class="languages-grid">
+                        <div class="language-item">
+                            <div class="language-name">German</div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="proficiency-label">Native</div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-name">English</div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%;"></div>
+                            </div>
+                            <div class="proficiency-label">Full Professional</div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-name">French</div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 30%;"></div>
+                            </div>
+                            <div class="proficiency-label">Elementary</div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-name">Spanish</div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 20%;"></div>
+                            </div>
+                            <div class="proficiency-label">Elementary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>vic.lercher@outlook.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>💼</span>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p>https://www.linkedin.com/in/victoria-lercher-806324134/</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>🐙</span>
+                        <div>
+                            <strong>GitHub</strong>
+                            <p>https://github.com/Vic-Ler</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Victoria Rauscher. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
