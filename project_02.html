@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFT Dashboard</title>
+  <script src="scripts/projects.js" defer></script>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 60px; height: 60px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 60%; right: 10%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="header">
+        <div class="nav container">
+            <a href="index.html#projects" class="back-link">
+             ← Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">TFT Dashboard</h1>       
+        <div class="tech-stack">
+            <span class="tech-tag">Data Wrangling</span>
+            <span class="tech-tag">Data Visualisation</span>
+            <span class="tech-tag">R</span>
+            <span class="tech-tag">SCSS</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">Bslib</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">Reactable</span>
+            <span class="tech-tag">API integration</span>
+        </div>
+        <p class="subtitle">I’ve been playing Teamfight Tactics (TFT) on and off and enjoy 
+            the strategic depth of the game. Out of curiosity, I explored Riot’s developer 
+            API to see if I could access my own match data and build a personal dashboard 
+            in R. TFT is an auto-battler strategy game where players compete by assembling 
+            teams of champions with different traits and items, making data about 
+            performance and history especially interesting to analyze. <br><br>
+            The biggest challenge was understanding how Riot structures its data and 
+            identifying the right endpoints and fields. Using the REST API and an API key 
+            from the Riot Developer Platform, I retrieved and processed the raw data, then 
+            transformed it into visual insights through a custom dashboard.
+            While there are many existing dashboards—some far more advanced—this project 
+            was primarily a personal challenge driven by curiosity and a chance to practice 
+            working with APIs and data visualization in R.</p>
+        <div>
+          <a href="https://github.com/Vic-Ler/tft" class="github-link" target="_blank">
+                <span class="github-icon">
+                    <img src="images/github.png" alt="Toggle Arrow">
+                </span>
+                View on GitHub
+          </a>
+          <a href="https://vic-ler.github.io/tft/" class="github-link" target="_blank">
+                <span class="github-icon">
+                    <img src="images/link.png" alt="View Icon">
+                </span>
+                View Dashboard
+              </a>
+        </div>
+        <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/tft_image_01.png" alt="Dashboard Match History">
+              <span class="image-caption">player's match history</span>
+            </div>
+            <div class="image-container">
+              <img src="images/tft_image_02.png" alt="Trait Overview">
+              <span class="image-caption">player's selected traits and win rates</span>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class="subtitle">
+                The dashboard is built in R and rendered as a standalone HTML 
+                file. Data fetching, processing, and visualization are 
+                separated across multiple scripts: </p>
+          <ul class="subtitle">
+                <li><strong>Data Handling (get_data.R):</strong> 
+                Handles API calls, data extraction, and aggregation for player stats, 
+                match history, traits, units, and items. Implements functions to 
+                process lists of matches and structure data for visualization.</li>
+                <li><strong>Dashboard Rendering (report_script.R):</strong> 
+                    Generates interactive tables and charts using reactable and plotly. 
+                    Includes inline mini-bar visualizations for units, items, and traits. 
+                    Customizes layout and styling with bslib.</li>
+                <li><strong>Styling (styles.scss):</strong> 
+                    Provides a modern, responsive UI with semi-transparent panels, 
+                    rounded corners, and consistent color theming.</li>
+                <li><strong>Deployment (index.html + lib folder):</strong> 
+                    Produces a fully self-contained HTML dashboard, ensuring all 
+                    dependencies and assets load locally without requiring an 
+                    external server.</li>
+            </ul> 
+        </div>
+</body>
+</html>
