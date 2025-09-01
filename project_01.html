@@ -15,17 +15,16 @@
         <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 60%; animation-delay: 4s;"></div>
     </div>
 
-    <div class="container">
-        <div class="header">
+    <div class="header">
+        <div class="nav container">
             <a href="index.html#projects" class="back-link">
              ← Back to Portfolio
             </a>
+        </div>
     </div>
 
     <div class="container">
-        <h1 class="section-title">Marsian Winds</h1>
-        <p class="subtitle">Measuring Martian winds by tracking clouds in Emirates Mars Mission UV imaging</p>
-        
+        <h1 class="section-title">Marsian Winds</h1>       
         <div class="tech-stack">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Matlab</span>
@@ -34,119 +33,125 @@
             <span class="tech-tag">Image Analysis</span>
             <span class="tech-tag">Image Processing</span>
             <span class="tech-tag">Data Visualisation</span>
+            <span class="tech-tag">Astropy</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NetCDF4</span>
+            <span class="tech-tag">scikit-learn</span>
         </div>
-
-        <div class="project-toggles">
-          <div class="toggle-section">
-            <button class="toggle-btn" onclick="toggleSection(this)">
-              <span class="toggle-icon">
-                <img src="images/info.png" alt="Info Icon">
-              </span>
-              <span class="toggle-text">Overview</span>
-              <span class="toggle-arrow">
-                <img src="images/arrow.png" alt="Toggle Arrow">
-              </span>
-            </button>
-            <div class="toggle-content">
-              <p>Understanding wind patterns on Mars is essential for future human exploration and 
-                for advancing our knowledge of planetary climate dynamics. Despite their importance, 
-                Martian winds remain largely unknown. This project analyzes six image sequences 
-                from the Emirates Mars Mission’s EXI 320 nm ultraviolet observations to derive 
-                detailed wind field maps.
-                <br>
-                Using a cloud-tracking method called <b>Correlation Image Velocimetry (CIV)</b>, wind fields 
-                were calculated with time intervals of 10–30 minutes. Various image pre-processing 
-                techniques were tested to optimize CIV performance, with <b>contrast limited adaptive 
-                histogram equalization (CLAHE)</b> producing the most reliable results.</p>
-            </div>
-        </div>
-          
-          <div class="toggle-section">
-            <button class="toggle-btn" onclick="toggleSection(this)">
-              <span class="toggle-icon">
-                <img src="images/details.png" alt="Technical Details Icon">
-              </span>
-              <span class="toggle-text">Technical Details</span>
-              <span class="toggle-arrow">
-                <img src="images/arrow.png" alt="Toggle Arrow">
-              </span>
-            </button>
-            <div class="toggle-content">
-              <p>
-                This project involved multiple stages: <strong>literature review</strong>, <strong>data exploration</strong>, 
-                <strong>data preparation</strong>, <strong>image processing</strong>, <strong>Correlation Image Velocimetry (CIV)</strong>, 
-                <strong>result analysis</strong>, and <strong>plotting</strong>. The raw data came in <strong>FITS files</strong>, 
-                which were explored, prepared, and processed in <strong>Python</strong> using libraries such as 
-                <strong>Astropy</strong>, <strong>Matplotlib</strong>, <strong>NumPy</strong>, <strong>Pandas</strong>, 
-                <strong>NetCDF4</strong>, and <strong>scikit-learn</strong>. For the <strong>CIV</strong>, a 
-                cross-correlation–based technique was executed in <strong>UVMAT</strong>, a <strong>MATLAB-based interface</strong>. 
-                The <strong>CIV workflow</strong> consisted of several steps:
-            </p>
-            <ul>
-                <li><strong>CIV1:</strong> Initial velocity fields were calculated using specified interrogation window and shift box parameters; the grid size defined the number of vectors displayed.</li>
-                <li><strong>FIX1:</strong> Error correction and filtering of vectors above a pre-defined correlation coefficient.</li>
-                <li><strong>PATCH1:</strong> Smoothness filtering through interpolation and determination of the maximum vector size.</li>
-                <li><strong>CIV2, FIX2, PATCH2:</strong> The process was repeated using the vectors obtained from CIV1, allowing for refined parameter adjustments and accounting for rotation and deformation.</li>
-            </ul>
-            <br>
-            <p>
-                Velocity fields were then exported and analyzed in <strong>Python</strong>, where final results were visualized and plotted 
-                to provide detailed insights into <strong>Martian wind patterns</strong>. The project also included careful documentation 
-                of <strong>methodology, results, and discussion</strong>, and was compiled as a <strong>thesis in LaTeX format</strong>.
-            </p>
-              <a href="https://github.com/Vic-Ler/marsian-winds" class="github-link" target="_blank">
+        <p class="subtitle">Understanding wind patterns on Mars is essential for 
+          future human exploration and for advancing our knowledge of planetary 
+          climate dynamics. Despite their importance, Martian winds remain largely 
+          unknown. This project analyzes six image sequences from the Emirates Mars 
+          Mission’s EXI 320 nm ultraviolet observations to derive detailed wind 
+          field maps.<br>
+          Using a cloud-tracking method called Correlation Image Velocimetry (CIV), 
+          wind fields were calculated with time intervals of 10–30 minutes. 
+          Various image pre-processing techniques were tested to optimize CIV 
+          performance, with contrast limited adaptive histogram equalization (CLAHE) 
+          producing the most reliable results.</p>
+        <div>
+          <a href="https://github.com/Vic-Ler/marsian-winds" class="github-link" target="_blank">
                 <span class="github-icon">
                     <img src="images/github.png" alt="Toggle Arrow">
                 </span>
                 View on GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="toggle-section">
-            <button class="toggle-btn" onclick="toggleSection(this)">
-              <span class="toggle-icon">
-                <img src="images/results.png" alt="Info Icon">
-              </span>
-              <span class="toggle-text">Results</span>
-              <span class="toggle-arrow">
-                <img src="images/arrow.png" alt="Toggle Arrow">
-              </span>
-            </button>
-            <div class="toggle-content">
-                <p>
-                    The analysis of Martian wind fields revealed several key insights. While image processing 
-                    techniques improved the visibility of clouds, they did not significantly outperform the 
-                    original images. However, using <strong>Contrast Limited Adaptive Histogram Equalization (CLAHE)</strong> 
-                    allowed for the detection of additional velocity vectors, demonstrating the potential of 
-                    enhancing sub-regions within the data.
-                </p>
-                <p>
-                    The choice of <strong>CIV parameters</strong> and input image material had a strong influence 
-                    on the final results, showing that parameter tuning plays a critical role in deriving 
-                    accurate velocity fields.
-                </p>
-                <p>
-                    The study also identified several <strong>limitations</strong>. These include uncertainties in 
-                    vector direction due to the 3–4 km pixel resolution, variations in solar illumination, 
-                    and potential spacecraft position instabilities.
-                </p>
-                <p>
-                    Finally, the work suggests promising <strong>future directions</strong>. Alternative pre-processing 
-                    methods, particularly those focusing on sub-region enhancement, could further improve 
-                    CIV performance. Additionally, the appearance of <strong>atmospheric wave patterns in 
-                    high-pass filtered images</strong> points to opportunities for new insights into Martian 
-                    atmospheric dynamics.
-                </p>
-              <a href="https://drive.google.com/file/d/1lQTE92P16SioWVtcezntxujDuUEBnlfB/view?usp=drive_link" class="github-link" target="_blank">
+          </a>
+          <a href="https://drive.google.com/file/d/1lQTE92P16SioWVtcezntxujDuUEBnlfB/view?usp=drive_link" class="github-link" target="_blank">
                 <span class="github-icon">
                     <img src="images/download.png" alt="Download Icon">
                 </span>
                 Download Thesis
               </a>
+        </div>
+        <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/mars_image_01.png" alt="Raw Image">
+              <span class="image-caption">raw image mapped to longitudes and latitudes</span>
+            </div>
+            <div class="image-container">
+              <img src="images/mars_image_02.png" alt="Selected Areas">
+              <span class="image-caption">overview of the selected areas</span>
+            </div>
+            <div class="image-container">
+              <img src="images/mars_image_03.png" alt="Comparison of Image Processing Techniques">
+              <span class="image-caption">comparison of different image processing techniques</span>
             </div>
           </div>
         </div>
-</div>
+        <div class="container">
+          <p class="subtitle">
+                This project involved multiple stages: literature review, data exploration, 
+                data preparation, image processing, Correlation Image Velocimetry (CIV), 
+                result analysis, and plotting. The raw data came in FITS files, 
+                which were explored, prepared, and processed in Python using libraries such as 
+                Astropy, Matplotlib, NumPy, Pandas, NetCDF4, and scikit-learn. For the CIV, a 
+                cross-correlation–based technique was executed in UVMAT, a MATLAB-based interface. 
+            </p>
+        </div>
+        <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/mars_image_04.png" alt="UVMAT Interface">
+              <span class="image-caption">screenshot of UVMAT interface</span>
+            </div>
+            <div class="image-container">
+              <img src="images/mars_image_05.png" alt="Velocity Fields">
+              <span class="image-caption">resulting velocity fields</span>
+            </div>
+            <div class="image-container">
+              <img src="images/mars_image_06.png" alt="CIV Performance Analysis">
+              <span class="image-caption">CIV performance analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class="subtitle">
+                The CIV workflow consisted of several steps: 
+            </p>
+            <ul class="subtitle">
+                <li><strong>CIV1:</strong> Initial velocity fields were calculated using specified interrogation window and shift box parameters; the grid size defined the number of vectors displayed.</li>
+                <li><strong>FIX1:</strong> Error correction and filtering of vectors above a pre-defined correlation coefficient.</li>
+                <li><strong>PATCH1:</strong> Smoothness filtering through interpolation and determination of the maximum vector size.</li>
+                <li><strong>CIV2, FIX2, PATCH2:</strong> The process was repeated using the vectors obtained from CIV1, allowing for refined parameter adjustments and accounting for rotation and deformation.</li>
+            </ul>
+            <p class="subtitle">
+                Velocity fields were then exported and analyzed in Python, where final results were visualized and plotted 
+                to provide detailed insights into Martian wind patterns. The project also included careful documentation 
+                of methodology, results, and discussion, and was compiled as a thesis in LaTeX format.
+            </p>
+            <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/mars_image_07.png" alt="Bandpass Filter">
+              <span class="image-caption">bandpass filter indicating atmospheric waves</span>
+            </div>
+            <div class="image-container">
+              <img src="images/mars_image_08.png" alt="Zonal Means">
+              <span class="image-caption">visualisation of zonal means</span>
+            </div>
+          </div>
+        </div>
+            <p class="subtitle">
+                    The analysis of Martian wind fields revealed several key insights. While image processing 
+                    techniques improved the visibility of clouds, they did not significantly outperform the 
+                    original images. However, using Contrast Limited Adaptive Histogram Equalization (CLAHE)
+                    allowed for the detection of additional velocity vectors, demonstrating the potential of 
+                    enhancing sub-regions within the data. <br>
+                    The choice of CIV parameters and input image material had a strong influence 
+                    on the final results, showing that parameter tuning plays a critical role in deriving 
+                    accurate velocity fields.<br>
+                    The study also identified several limitations. These include uncertainties in 
+                    vector direction due to the 3–4 km pixel resolution, variations in solar illumination, 
+                    and potential spacecraft position instabilities.<br><br>
+                    Finally, the work suggests promising future directions. Alternative pre-processing 
+                    methods, particularly those focusing on sub-region enhancement, could further improve 
+                    CIV performance. Additionally, the appearance of atmospheric wave patterns in 
+                    high-pass filtered images points to opportunities for new insights into Martian 
+                    atmospheric dynamics.
+                </p>
+        </div>
 </body>
 </html>
