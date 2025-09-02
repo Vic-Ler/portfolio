@@ -52,6 +52,14 @@
       transition: all 0.3s ease;
     }
 
+    a {
+      color: #a1a1aa;
+    }
+
+    a:hover {
+      color: #65F4FF; 
+    }
+
     .back-link:hover {
       background: rgba(101, 244, 255, 0.2);
       transform: translateY(-2px);
@@ -115,6 +123,11 @@
       font-size: 0.75rem;
       margin-top: 0.25rem;          
       text-align: center;
+    }
+
+    .image-caption.desktop-note {
+    color: #a1a1aa;
+    text-align: left;
     }
 
     .tech-stack {
