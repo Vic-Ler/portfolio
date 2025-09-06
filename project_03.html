@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shopping Analysis & Revenue Prediction</title>
+  <script src="scripts/projects.js" defer></script>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 60px; height: 60px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 60%; right: 10%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="header">
+        <div class="nav container">
+            <a href="index.html#projects" class="back-link">
+             ← Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="section-title">Online Shopping Analysis & Revenue Prediction</h1>       
+        <div class="tech-stack">
+            <span class="tech-tag">Predictive Analytics</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Classification</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Design Patterns</span>
+            <span class="tech-tag">ZenML</span>
+            <span class="tech-tag">MLflow</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Random Forest</span>
+            <span class="tech-tag">Logistic Regression</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">EDA</span>
+            <span class="tech-tag">Feature Engineering</span>
+        </div>
+        <p class="subtitle">As someone with a functional programming background, I wanted to step out of my comfort zone 
+            and explore a more object-oriented approach. In this project, I experimented with factory and strategy 
+            patterns to structure my code more flexibly. On the machine learning side, I wrapped my ML pipeline using 
+            ZenML and MLflow, which allowed me to visualize the pipeline and reuse trained models efficiently. I tested 
+            three classification strategies — logistic regression, XGBoost, and random forest — to predict the target 
+            variable: whether a user generates revenue (Yes/No) based on their behavior. The dataset, from UCI, includes 
+            detailed user session data such as pages visited, exit rates, and bounce rates. To complete the workflow, 
+            I deployed the trained model via Streamlit, providing a simple interface for experimentation. Overall, I 
+            really enjoyed this project — especially seeing the pipeline visualized in ZenML with outputs at each stage, 
+            which made the whole process tangible and exciting.</p>
+        <div>
+          <a href="https://github.com/Vic-Ler/online-shopping-analysis" class="github-link" target="_blank">
+                <span class="github-icon">
+                    <img src="images/github.png" alt="Toggle Arrow">
+                </span>
+                View on GitHub
+          </a>
+          <a href="https://online-shopping-analysis.streamlit.app/" class="github-link" target="_blank">
+                <span class="github-icon">
+                    <img src="images/link.png" alt="View Icon">
+                </span>
+                View Prediction UI
+              </a>
+        </div>
+        <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/distriutions_online_shopping.png" alt="Distriution Graphs">
+              <span class="image-caption">exemplary distribution graphs</span>
+            </div>
+            <div class="image-container">
+              <img src="images/correlation_matrix_online_shopping.png" alt="Correlation Matrix">
+              <span class="image-caption">correlation matrix of numeric columns</span>
+            </div>
+            <div class="image-container">
+              <img src="images/rf.png" alt="Random Forest Confusion Matrix">
+              <span class="image-caption">confusion matrix - random forest</span>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class="subtitle">
+                The dataset contains 12,330 user sessions on an e-commerce platform, with Revenue as
+                 the target variable (Boolean). Most sessions did not result in a purchase. Features 
+                 capture user behavior, page interactions, and contextual information, including page 
+                 counts, durations, analytics metrics, visitor type, device, and timing details.</p>
+          <ul class="subtitle">
+                <li><strong>Continuous Variables:</strong> 
+                    Administrative, Administrative_Duration, Informational, Informational_Duration, 
+                    ProductRelated, ProductRelated_Duration, BounceRates, ExitRates, PageValues, SpecialDay</li>
+                <li><strong>Categorical Variables:</strong> 
+                    Month, OperatingSystems, Browser, Region, TrafficType, VisitorType, Weekend</li>
+                <li><strong>Target:</strong> 
+                    Revenue (Boolean)</li>
+            </ul> 
+            <p class="subtitle">
+                To prepare the dataset for modeling, several preprocessing and feature engineering steps were applied:</p>
+            <ul class="subtitle">
+                <li><strong>Boolean columns</strong> (Weekend, Revenue) were transformed into binary integers.</li>
+                <li><strong>VisitorType</strong> was one-hot encoded, and <strong>Month</strong> was mapped to seasons to reduce cardinality, then one-hot encoded.</li>
+                <li>Some columns related to pages and page durations, which were highly skewed, were log-transformed to normalize distributions.</li>
+                <li>Some high-cardinality or less relevant features (Region, TrafficType, Browser, OperatingSystems) were excluded, as they showed little impact on the target variable.</li>
+                <li><strong>Standard scaling</strong> was applied to all features before feeding them into the ML models.</li>
+                <li><strong>Outliers</strong> were removed using a strict <strong>z-score threshold of 3.5</strong> to preserve important data points while controlling extreme values.</li>
+            </ul> 
+            <p class="subtitle">
+                <strong>Notes and potential future improvements</strong>
+                <br>Combining features (e.g., pages × page duration) could be tested, especially for logistic regression to reduce multicollinearity and capture interaction effects. 
+                Moreover, the dataset is imbalanced (most sessions did not end in revenue), so future experiments could explore oversampling to balance classes.
+            </p>
+            <div class="image-line-wrapper">
+          <div class="image-line">
+            <div class="image-container">
+              <img src="images/mlflow.png" alt="MLFlow Interface">
+              <span class="image-caption">mlflow experiment interface</span>
+            </div>
+            <div class="image-container">
+              <img src="images/zenml.png" alt="ZenML Pipeline Visualisation">
+              <span class="image-caption">ZenML pipeline visualisation</span>
+            </div>
+            <div class="image-container">
+              <img src="images/streamlit.png" alt="Streamlit App">
+              <span class="image-caption">streamlit app interface</span>
+            </div>
+          </div>
+        </div>
+        <p class="subtitle">
+                The dataset was split into training and test sets with a test size of 20%, 
+                and three models—Logistic Regression, Random Forest, and XGBoost—were applied. 
+                Both XGBoost and Random Forest slightly outperformed Logistic Regression, 
+                achieving accuracies of approximately 0.897 and 0.898, respectively, 
+                compared to 0.892 for Logistic Regression. Similarly, XGBoost had the highest F1 
+                score of around 0.650, followed by Random Forest at 0.642, while Logistic 
+                Regression scored 0.628. The improved performance of the ensemble methods could 
+                be attributed to their ability to capture complex non-linear relationships in the data, 
+                whereas Logistic Regression, as a linear model, is more limited. 
+                While these results are promising, there is still room for improvement through 
+                hyperparameter tuning and further model optimization to potentially increase 
+                performance in future iterations.
+            </p>
+        <p class="subtitle">
+                In general, there are many ways this project could be further improved, such as through
+                 more advanced feature engineering, hyperparameter tuning, or experimenting with 
+                 additional models. However, the primary goal for me was not to achieve perfect predictions, 
+                 but to gain hands-on experience and step out of my comfort zone. Working on this project 
+                 allowed me to implement zenML for pipeline management, track experiments with MLflow, 
+                 and build an interactive interface with Streamlit, all while exploring a new design pattern. 
+            </p>
+            <p class="subtitle"><strong>Sources:</strong><br>
+                <a href="https://archive.ics.uci.edu/dataset/468/online%2Bshoppers%2Bpurchasing%2Bintention%2Bdataset?" target="_blank">UCI Dataset</a><br>
+                <a href="https://github.com/vn33/MLOps_House-Price-Prediction-using-ZenML-and-MLflow?" target="_blank">Reference for Repository Structure</a><br>
+            </p>     
+        </div>
+</body>
+</html>
